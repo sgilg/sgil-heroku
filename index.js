@@ -15,7 +15,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/hej', function(request, response) {
-	response.send(cool());
+	response.send(hej());
 });
 
 app.listen(app.get('port'), function() {
