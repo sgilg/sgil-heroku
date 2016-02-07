@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html>
 <head>
 <title><%= title %></title>
 </head>
 <body>
-welcome <%= user %>;
+welcome <%= user%>;
 </body>
 </html>
