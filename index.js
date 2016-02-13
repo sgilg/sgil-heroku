@@ -20,8 +20,7 @@ cloudinary.config({
 
 app.get('/', function(request, response) {
   response.render('pages/index',{user: "Great User",title:"homepage"});
-  cloudinary.url("raspberry_pi_camera.jpg", { width: 1280, height: 720, crop: "fill" });
-});
+  });
 
 app.get('/hej', function(request, response) {
 	response.send(hej());
