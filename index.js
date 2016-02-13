@@ -19,7 +19,7 @@ cloudinary.config({
 });
 
 app.get('/', function(request, response) {
-  response.render('pages/index',{user: "Great User",title:"homepage"});
+  response.render('pages/index',{user: "Sara",title:"homepage"});
   });
 
 app.get('/hej', function(request, response) {
