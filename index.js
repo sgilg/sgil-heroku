@@ -19,7 +19,7 @@ cloudinary.config({
 });
 
 app.get('/', function(request, response) {
-  response.render('pages/index',{user: "Nisse",title:"homepage", image:cloudinary.image("raspberry_pi_camera.jpg", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
+  response.render('pages/index',{user: "Nisse",title:"homepage", image:cloudinary.image("raspberry_pi_camera", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
   
   });
 
