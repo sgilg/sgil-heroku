@@ -12,11 +12,11 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 // Configure Cloudinary access
-cloudinary.config({ 
-  cloud_name: 'sgil', 
-  api_key: '784949991342827', 
-  api_secret: 'JQDfPxlF5F2aUYunN2Zc0eAp8_M' 
-});
+//cloudinary.config({ 
+  //cloud_name: 'sgil', 
+  //api_key: '784949991342827', 
+  //api_secret: 'JQDfPxlF5F2aUYunN2Zc0eAp8_M' 
+//});
 
 app.get('/', function(request, response) {
   response.render('pages/index',{user: "Great User",title:"homepage"});
