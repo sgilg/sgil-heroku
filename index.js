@@ -5,6 +5,12 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(express.static(__dirname + '/public'));
+
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
 // Configure Cloudinary access
 cloudinary.config({ 
   cloud_name: 'sgil', 
@@ -12,15 +18,9 @@ cloudinary.config({
   api_secret: 'JQDfPxlF5F2aUYunN2Zc0eAp8_M' 
 });
 
-app.use(express.static(__dirname + '/public'));
-
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
 app.get('/', function(request, response) {
   response.render('pages/index',{user: "Great User",title:"homepage"});
-  cloudinary.url("raspberry_pi_camera.jpg", { width: 1280, height: 720, crop: "fill" });
+  //cloudinary.url("raspberry_pi_camera.jpg", { width: 1280, height: 720, crop: "fill" });
 });
 
 app.get('/hej', function(request, response) {
