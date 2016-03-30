@@ -19,11 +19,10 @@ cloudinary.config({
 });
 
 app.get('/', function(request, response) {
-	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+	response.render('pages/index',{user: "Gabbi",title:"sgil.se", bild:cloudinary.image("raspberry_pi_camera", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
+  	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
 	response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
 	response.setHeader("Expires", "0"); // Proxies.
-	response.render('pages/index',{user: "Gabbi",title:"sgil.se", bild:cloudinary.image("raspberry_pi_camera", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
-  
   });
 
 app.get('/hej', function(request, response) {
