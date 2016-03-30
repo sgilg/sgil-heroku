@@ -18,8 +18,12 @@ cloudinary.config({
   api_secret: 'JQDfPxlF5F2aUYunN2Zc0eAp8_M' 
 });
 
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+response.setHeader("Expires", "0"); // Proxies.
+
 app.get('/', function(request, response) {
-  response.render('pages/index',{user: "Nisse",title:"homepage", bild:cloudinary.image("raspberry_pi_camera", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
+  response.render('pages/index',{user: "Nisse",title:"sgil.se", bild:cloudinary.image("raspberry_pi_camera", {format: "jpg", width: 1280, height: 720, crop: "fill"})});
   
   });
 
